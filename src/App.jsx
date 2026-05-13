@@ -95,6 +95,8 @@ function App() {
         </div>
       </section>
 
+      /* START WITH PROJECTS SECTION */
+
     </div>
   )
 
