@@ -95,14 +95,51 @@ function App() {
         </div>
       </section>
 
-      /* START WITH PROJECTS SECTION */
+      {/* Projects Section: Yellow border + Interactive Project Buttons */}
+      <section id="projects" className="projects-wrapper max-width-content">
+        <div className="projects-container border-pale-yellow-outer">
+          
+          <header className="projects-header text-center">
+            <h4 className="label-text text-grey-medium">Recent</h4>
+            <h2 className="section-title salmon-text font-serif-small uppercase">Projects</h2>
+          </header>
+
+          {/* Project selector row */}
+          <div className="project-buttons-row">
+            {ALL_PROJECTS.map((project, index) => (
+              <button
+                key={project.title}
+
+                // Dynamically apply the 'active-button' class if this is the selected project
+                className={`project-select-btn font-sans-body border-red-thin text-grey-dark ${activeProjectIndex === index ? 'active-button' : ''}`}
+                onClick={() => setActiveProjectIndex(index)}
+              >
+                {project.title}
+              </button>
+            ))}
+          </div>
+
+          {/* Dynamic project description */}
+          <div className="project-details-card font-sans-body">
+            <h3 className="project-detail-title">{activeProject.title}</h3>
+            
+            {/* Tools field: tools used for each project */}
+            {activeProject.tools && (
+              <p className="project-detail-tools text-grey-medium">
+                <strong>Tools Used:</strong> {activeProject.tools}
+              </p>
+            )}
+
+            <p className="project-detail-desc text-grey-dark">
+              {activeProject.description}
+            </p>
+          </div>
+          
+        </div>
+      </section>
 
     </div>
   )
-
-
-
-
 }
 
 export default App
