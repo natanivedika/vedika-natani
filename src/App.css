@@ -160,6 +160,12 @@ button {
   border: 1px solid var(--color-salmon);
   padding: 12px 28px;
   font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+/* transition: hover state */
+.download-resume-btn:hover {
+  background-color: var(--color-pale-yellow-active);
 }
 
 .social-links-row {
@@ -184,5 +190,82 @@ button {
   height: auto;
   object-fit: cover;
 }
+
+/* Projects Section (yellow border container) */
+.projects-wrapper {
+  margin-bottom: 60px;
+}
+
+.projects-container {
+  border: 20px solid var(--color-pale-yellow);
+  padding: 50px;
+}
+
+.projects-header {
+  margin-bottom: 40px;
+}
+
+.label-text {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 1.7rem;
+  letter-spacing: 0.1em;
+}
+
+/* Projects button selector row */
+.project-buttons-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.project-select-btn {
+  flex: 1; /* equal width for all buttons */
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 1.05rem;
+  transition: background-color 0.2s ease;
+}
+
+/* interaction 1: hover state */
+.project-select-btn:hover {
+  background-color: var(--color-pale-yellow-active);
+}
+
+/* interaction 2: select state */
+.project-select-btn.active-button {
+  background-color: var(--color-pale-yellow-active);
+}
+
+/* Project details section */
+.project-details-card {
+  text-align: center;
+  max-width: 800px; /* Keep description legible width */
+  margin: 0 auto;
+  min-height: 150px; /* Optional: sets min-height so description box doesn't collapse */
+}
+
+.project-detail-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--color-grey-dark);
+}
+
+.project-detail-tools {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* projects description area */
+.project-detail-desc {
+  font-size: 1rem;
+}
+
+
 
 
